@@ -39,6 +39,8 @@ $(document).ready(function () {
 
     // Создаём аудио-объект
     let audio = new Audio('images/harold-screamer.mp3');
+    let audio_fart = new Audio('images/mega-fart.mp3');
+    let audio_fart2 = new Audio('images/perd.mp3');
 
     $('.done-btn').one('click', function () {
         // Устанавливаем transform для ship-image при загрузке страницы
@@ -59,6 +61,12 @@ $(document).ready(function () {
                 'opacity': '1'
             });
             audio.play();
+            setTimeout(function () {
+                audio_fart.play();
+                setTimeout(function () {
+                    audio_fart2.play();
+                }, 1300);
+            }, 1000);
         }, 6000);
     });
 });
