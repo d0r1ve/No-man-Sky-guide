@@ -6,12 +6,6 @@ $(document).ready(function () {
         once: true
     });
 
-    // Устанавливаем transform для ship-image при загрузке страницы
-    $('.ship-image').css({
-        'transform': 'translate(-50%, -10%)',
-        'opacity': '1'
-    });
-
     // Плавная прокрутка к секциям
     $('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
@@ -47,6 +41,11 @@ $(document).ready(function () {
     let audio = new Audio('images/harold-screamer.mp3');
 
     $('.done-btn').one('click', function () {
+        // Устанавливаем transform для ship-image при загрузке страницы
+        $('.ship-image').css({
+            'transform': 'translate(-50%, -10%)',
+            'opacity': '1'
+        });
         $(".hello-part").css({
             'opacity': '0'
         });
